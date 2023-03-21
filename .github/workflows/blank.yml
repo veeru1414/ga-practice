@@ -6,7 +6,6 @@ on:
 jobs:
   example-job:
    runs-on: self-hosted
-   environment: 'linux'
    steps:
      - name: Run build script
        shell: bash
@@ -15,6 +14,7 @@ jobs:
        run: sh /home/bandaru/Pictures/myfiles/first.sh
   example-job1:
    runs-on: self-hosted
+   environment: 'linux'   
    steps:
      - name: Run build script
        shell: bash
