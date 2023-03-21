@@ -1,26 +1,11 @@
-name: Execute Script
+name: docker-image
 on:
   push:
-    branches:
-      - main
+    branches: 
+     - main
 jobs:
-  example-job:
-   runs-on: self-hosted
-   steps:
-     - name: Run build script
-       shell: bash
-       id: execute-script
-       continue-on-error: true
-       run: |
-           sh /home/bandaru/Pictures/myfiles/first.sh
-           pwd
-  example-job1:
-   runs-on: self-hosted
-   environment: 'linux'   
-   steps:
-     - name: Run build script
-       shell: bash
-       id: execute-script
-       continue-on-error: true
-       run: sh /home/bandaru/Pictures/myfiles/second.sh       
-       
+  container-test-job:
+    runs-on: ubuntu-latest
+    container: 
+      image: nginx
+  
