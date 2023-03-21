@@ -11,7 +11,9 @@ jobs:
        shell: bash
        id: execute-script
        continue-on-error: true
-       run: sh /home/bandaru/Pictures/myfiles/first.sh
+       run: |
+           sh /home/bandaru/Pictures/myfiles/first.sh
+           pwd
   example-job1:
    runs-on: self-hosted
    environment: 'linux'   
