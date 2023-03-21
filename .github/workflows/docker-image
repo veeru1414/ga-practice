@@ -1,0 +1,4 @@
+jobs:
+  container-test-job:
+    runs-on: self-hosted
+    container: nginx
